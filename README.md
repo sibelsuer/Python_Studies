@@ -1,2 +1,2 @@
 # Python_Studies
-Python with Hangman 
+Hangman with Python
