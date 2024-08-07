@@ -1,0 +1,94 @@
+import random
+
+Liste=["python","print","random","while","choice"]
+Kelime=random.choice(Liste)
+
+Adam=['''
+
+ +----+
+ O    |
+/ \   |
+ |    |
+/ \   |
+      |
+    ----''','''
+
+
+ +----+
+ O    |
+/ \   |
+ |    |
+/     |
+      |
+    ----''','''
+
++----+
+ O    |
+/ \   |
+ |    |
+      |
+      |
+    ----''','''
+
++----+
+ O    |
+/ \   |
+      |
+      |
+      |
+    ----''','''
+
++----+
+ O    |
+/     |
+      |
+      |
+      |
+    ----''','''
+
++----+
+ O    |
+      |
+      |
+      |
+      |
+    ----''','''
+
++----+
+      |
+      |
+      |
+      |
+      |
+    ----''']
+
+Dogruharf=[]
+Yanlısharf=[]
+Hak=len(Adam)
+
+while Hak>0:
+    out=''
+    for h in Kelime:
+        if h in Dogruharf:
+            out+=h
+        else:
+                out+='_'
+    if out== Kelime:
+        break
+    print('Kelime:',out)
+    print(Adam[Hak-1])
+    girharf=input()
+    if girharf in Dogruharf or girharf in Yanlısharf:
+        print(girharf,'Bu harf girildi')
+    elif girharf in Kelime:
+        print('Doğru Harf')
+        Dogruharf.append(girharf)
+    else:
+        print('Yanlış Harf...!')
+        Hak-=1
+        Yanlısharf.append(girharf)
+if Hak!=0:
+    print('Tebrikler...Kazandınız...Kelime:',Kelime)
+else:
+        print('Maalesef...Kaybettiniz...Kelime:',Kelime,'idi')
+
