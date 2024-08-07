@@ -1,5 +1,4 @@
 # Python_Studies
-#Hangman with Python
 import random
 
 Liste=["python","print","random","while","choice"]
